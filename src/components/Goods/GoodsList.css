@@ -1,0 +1,57 @@
+.goodsList{
+    padding: 8px 16px;
+    background-color: #ffffff;
+}
+.goodsList .goods{
+    display: flex;
+    padding: 10px 0px;
+}
+.goodsList .goods img{
+    height: 240px;
+    width: 240px;
+    margin-right: 8px;
+    flex: 1;
+    -webkit-flex: 1;
+}
+.goodsList .goods .goodsRight{
+    flex: 2;
+    -webkit-flex: 2;
+    margin: 0;
+    margin-left: 0.2rem;
+}
+
+.goodsList .goods .goodsRight .title{
+    font-size: .32rem;
+    margin: 0px;
+    height: 100px;
+}
+.goodsList .goods .goodsRight .spec{
+    line-height: 0;
+    font-size: .28rem;
+    color: #9b9b9b;
+}
+.goodsList .goods .goodsRight .price{
+
+    color: #fa632d;
+}
+.goodsList .goods .goodsRight .price b{
+
+    font-size: .36rem;
+    margin-left: 5px;
+}
+.goodsList .goods .goodsRight .expiring{
+    float: right;
+    border: 1px solid #fa632d;
+    color: #fa632d;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.goodsList .goods .goodsRight .otherInfo{
+    line-height: 0;
+    font-size: .28rem;
+    color: #9b9b9b;
+}
+
+.goodsList .goods .goodsRight .otherInfo .stock{
+    float: right;
+}

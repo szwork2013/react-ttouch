@@ -1,0 +1,8 @@
+:global(html, body, #app){
+  height: 100%;
+  color: #666;
+}
+
+:global(a){
+  color: #666;
+}
