@@ -33,7 +33,7 @@ npm start
 │   ├─ containers/      # 容器组件
 │   ├─ models/          # 容器组件
 │   │   ├─ common.js        #处理公共方法(例如:全局加载loading)
-│   │   ├─ user.js          # 用户模型
+│   │   ├─ user.js          # 用户模型(包含 reduces、effects、state、命名空间)
 │   ├─ redux/           # Redux 相关处理
 │   │   ├─ create.js        # 创建store
 │   │   ├─ enhancers.js     # 加强store
