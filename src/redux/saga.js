@@ -1,7 +1,3 @@
-/**
- * Created by zhouchao on 16/11/27.
- */
-
 import {sagaMiddleware} from './middleware'
 
 /**

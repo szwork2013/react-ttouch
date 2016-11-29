@@ -1,6 +1,3 @@
-/**
- * Created by zhouchao on 16/11/27.
- */
 import {_interopRequireDefault} from '../utils/BabelHelper'
 import {injectReducer} from './reducer';
 import { takeEvery } from 'redux-saga';
@@ -47,7 +44,11 @@ export function getReducer(model) { // 生成reducer
     return reducer ? reducer(state, action) : state;
   };
 }
-
+/**
+ * 创建saga
+ * @param effects
+ * @returns {Function}
+ */
 function getSaga(effects) {
   
   return function * () {
@@ -62,6 +63,11 @@ function getSaga(effects) {
   }
 }
 
+/**
+ *
+ * @param model
+ * @returns {Array}
+ */
 function getSagas(model) {
   
   let sagas = [];
@@ -73,6 +79,12 @@ function getSagas(model) {
   return sagas;
 }
 
+/**
+ * 创建监听器
+ * @param key
+ * @param _effect
+ * @returns {Function}
+ */
 function getWatcher(key, _effect) {
   
   return function * () {
@@ -100,6 +112,4 @@ export function injectModel(model) {
     store.models[model.namespace] = model;
     
   }
-  
- 
 }

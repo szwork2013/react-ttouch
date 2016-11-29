@@ -6,7 +6,6 @@ import { routerMiddleware } from 'react-router-redux'
 import { browserHistory } from 'react-router'
 import createSagaMiddleware from 'redux-saga'
 
-
 const historyMiddleware = routerMiddleware(browserHistory);
 
 export const sagaMiddleware = createSagaMiddleware();
