@@ -69,7 +69,6 @@ export default class Home extends Component{
     
     render(){
       
-      
       const settings = {
         dots: true,
         autoplay: true,
@@ -157,7 +156,7 @@ export default class Home extends Component{
               </Flex.Item>
             </Flex>
           </div>
-          <GoodsList dataSource={this.state.dataSource} isLoading={this.state.isLoading} />
+            <GoodsList dataSource={this.state.dataSource} isLoading={this.state.isLoading} />
         </div>
       );
     }

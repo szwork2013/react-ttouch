@@ -17,7 +17,7 @@ const store = createStore(
   )
 );
 
-store.models = [];
+store.models = []; // 增强store  加入model 用于后面依赖注入model
 
 export default store;
 
@@ -27,4 +27,5 @@ export default store;
 export const history = syncHistoryWithStore(
   browserHistory,
   store,
+  { selectLocationState: (state) => state.routing }
 );

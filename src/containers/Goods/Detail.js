@@ -3,31 +3,42 @@
  */
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router'
+import autoBind from 'autobind-decorator'
+import pureRender from 'pure-render-decorator';
+// import { push } from 'react-router-redux'
 import styles from './Detail.css'
 
-@connect( // 功能同 UTIL/createContainer
+@connect(
   ({ goods }) => ({ goods })
 )
+@pureRender
 export default class GoodsDetail extends Component{
   
   constructor(props){
     
     super(props);
     
-    props.dispatch({type: 'goods/query'});
-  
   }
+  
+  @autoBind
+  click(){
+    
+    // this.props.dispatch(push(''));
+    
+    this.props.dispatch({type: 'common/hideLoading'});
+    
+  }
+  
   render(){
   
     return (
-      
-      <div className={styles.title222}>
+      <div className={styles.title}>
   
-        <Link to={'/'}>
-  dsadsa333
-        </Link>
-          
+        <div onClick={this.click}>{this.props.goods.name}</div>
+
+        <div>
+          </div>
+        
       </div>
     );
     

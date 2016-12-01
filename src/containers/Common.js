@@ -5,22 +5,24 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { ActivityIndicator } from 'antd-mobile';
 
-@connect( // 功能同 UTIL/createContainer
+@connect(
   ({ common }) => ({ common })
 )
-export default class Home extends Component{
+export default class Common extends Component{
  
     constructor(props){
       super(props);
     }
-    
     render(){
+      
       this.state = this.props.common;
+      
       return(
         <div>
           <div className="container">
             {this.props.children}
           </div>
+  
           <ActivityIndicator
             toast
             text={this.state.animatingText}

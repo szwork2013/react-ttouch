@@ -46,6 +46,7 @@ config.plugins.push(
     // 公共代码分离打包
     names: ['vendor', 'mainifest']
   }),
+  
   new ExtractTextPlugin('[name].[contenthash:6].css', {
     allChunks : true // 若要按需加载 CSS 则请注释掉该行
   }),
@@ -54,6 +55,7 @@ config.plugins.push(
     template: config.commonPath.indexHTML,
     chunksSortMode: 'none'
   })
+  
 );
 
 module.exports = config;

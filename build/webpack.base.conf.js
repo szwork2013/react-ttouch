@@ -29,7 +29,8 @@ module.exports = {
       'react-router',
       'react-router-redux',
       'redux',
-      'history'
+      'history',
+      'redux-saga'
     ]
   },
   output: {
